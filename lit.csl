@@ -25,8 +25,8 @@
         </names>
         <!-- 저널명 -->
         <text variable="container-title" prefix=", " suffix=", "/>
-        <!-- 권(volume)을 볼드체로 표시 -->
-        <text variable="volume" font-weight="bold" suffix=", "/>
+        <!-- 권(volume)을 볼드체로 표시, 쉼표 중복 제거 -->
+        <text variable="volume" font-weight="bold" suffix=" "/>
         <!-- 페이지(page) -->
         <text variable="page" suffix=" "/>
         <!-- 연도(year) -->
