@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never">
+  <info>
+    <title>Numbered Citation Style</title>
+    <id>numbered-citation-style</id>
+    <updated>2024-10-30T04:59:21+00:00</updated>
+  </info>
+
+  <!-- 인용 스타일 -->
+  <citation>
+    <layout>
+      <text variable="citation-number" suffix="."/>
+    </layout>
+  </citation>
+
+  <!-- 참고문헌 스타일 -->
+  <bibliography>
+    <layout>
+      <group delimiter=", ">
+        <!-- 저자 표시 -->
+        <names variable="author">
+          <name form="long" and="text" delimiter=", " initialize-with=". "/>
+        </names>
+        <!-- 저널명 -->
+        <text macro="container-title" prefix=", " suffix=", "/>
+        <!-- 권(volume)을 볼드체로 표시 -->
+        <text variable="volume" font-weight="bold" suffix=", "/>
+        <!-- 페이지(page) -->
+        <text variable="page" suffix=" "/>
+        <!-- 연도(year) -->
+        <group prefix="(" suffix=")." delimiter="">
+          <date variable="issued">
+            <date-part name="year"/>
+          </date>
+        </group>
+      </group>
+      
+      <!-- 책의 경우 출판사와 도시 표시 -->
+      <group delimiter=", ">
+        <text variable="publisher"/>
+        <text variable="publisher-place"/>
+      </group>
+      
+      <!-- 특허의 경우 번호 표시 -->
+      <text variable="number" prefix="US Patent, "/>
+    </layout>
+  </bibliography>
+</style>
